@@ -1,3 +1,10 @@
 # kirkday.club
 Website for kirkday.club
-![image](https://github.com/user-attachments/assets/df062756-f0d2-4325-b62d-2e25430e676c)
+
+Contributions welcome!!
+
+![kirk-day-tweet](./assets/images/kirk-day-tweet.png)
+
+But Kirk won't be happy about it.
+
+![kirk-day-2024](./assets/images/kirk_day_2024.png)
