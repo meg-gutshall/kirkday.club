@@ -29,5 +29,66 @@
       src="https://platform.twitter.com/widgets.js"
       charset="utf-8"
     ></script>
+
+    <style>
+      #kirky {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        place-items: center;
+        --count: 0;
+
+        & .flip-reverse {
+          animation: flipIt 2000ms forwards;
+        }
+        & .flip-reverse-1 {
+          animation: flipItReverse 2000ms forwards;
+        }
+      }
+
+      @keyframes flipIt {
+        0% {
+          transform: scaleY( 1) scaleX( 1);
+        }
+        50% {
+          transform: scaleY( 1) scaleX(-1);
+        }
+        100% {
+          transform: scaleY(-1) scaleX(-1);
+        }
+      }
+      @keyframes flipItReverse {
+        0% {
+          transform: scaleY(-1) scaleX(-1);
+        }
+        50% {
+          transform: scaleY(-1) scaleX( 1);
+        }
+        100% {
+          transform: scaleY( 1) scaleX( 1);
+        }
+      }
+    </style>
+    <section id="kirky">
+      <img id="kirky-image" src="./kirk.jpg" alt="Kirk with headphones" />
+      <button id="kirky-button">Flip and reverse it!</button>
+      <script>
+        document.getElementById('kirky-button').addEventListener('click', missyElliot);
+        const img = document.getElementById('kirky-image');
+        let count = 0;
+        function missyElliot() {
+          count = (count + 1) % 2;
+          if (count === 0) {
+            img.classList.remove('flip-reverse');
+            img.classList.add('flip-reverse-1');
+          } else {
+            img.classList.remove('flip-reverse-1');
+            img.classList.add('flip-reverse');
+          }
+        }
+      </script>
+    </section>
+
   </body>
 </html>
